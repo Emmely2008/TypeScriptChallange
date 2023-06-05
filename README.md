@@ -36,7 +36,7 @@ const ageOfFriend = get(object, "user.friends.0.age");
 
 ### The solution
 
-In my solution, I first defined the `User` type by combining the properties of the `Person` interface with additional properties like `address` and `friends` using key mappings. This ensures that the `User` type includes all the necessary properties and avoiding redundancy.
+In my solution, found in `index.ts`, I first defined the `User` type by combining the properties of the `Person` interface with additional properties like `address` and `friends` using key mappings. This ensures that the `User` type includes all the necessary properties and avoiding redundancy.
 
 Next, I introduced the `getPossibleKeys` type, which generates valid path keys as strings based on the object type. This type handles arrays by using __conditional types__ to recursively generate keys for array elements. This allows for proper suggestions on keys when using dot notation.
 
